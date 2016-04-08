@@ -26,6 +26,8 @@ public class Employee {
 	@Column(name = "SALARY")
 	private int salary;
 
+	@Column(name = "DateHired")
+	private Date DateHired;
 	// FAKE_ATTRIBUTE is a attribute of the class... but will be ignored by hibernate.
 	@Transient
 	private String FAKE_ATTRIBUTE;
@@ -77,6 +79,14 @@ public class Employee {
 
 	public void setSalary(int salary) {
 		this.salary = salary;
+	}
+
+	public Date getDateHired() {
+		return DateHired;
+	}
+
+	public void setDateHired(Date dateHired) {
+		DateHired = dateHired;
 	}
 
 }
